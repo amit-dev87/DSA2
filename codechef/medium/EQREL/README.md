@@ -82,7 +82,7 @@ Therefore, no energy is required.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:44:24.158Z  
+**Submitted:** 2026-09-28T13:45:29.997Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -92,7 +92,7 @@ int main() {
 	int n,sum=0;
 	int m=INT_MAX;
 	cin>>n;
-    vector<int>a;
+    vector<int>a(n);
     for(int i=0;i<n;i++){
         cin>>a[i];
         m=min(m,a[i]);
@@ -100,7 +100,7 @@ int main() {
     for(int i=0;i<n;i++){
         sum+=a[i]-m;
     }
-    return sum;
+    cout<<sum;
 }
 
 ```
