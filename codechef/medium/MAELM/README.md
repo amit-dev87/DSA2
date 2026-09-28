@@ -86,7 +86,7 @@ Therefore, all elements of $B$ cannot be matched, and the answer is `FALSE`.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:57:58.266Z  
+**Submitted:** 2026-09-28T14:05:49.209Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -95,18 +95,30 @@ using namespace std;
 int main() {
 	int n,m;
 	cin>>n>>m;
+	unordered_map<int,int>fre;
 	int a[n][n],b[m][m];
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
-            cin>>a[i][j];
+            int x;
+            cin>>x;
+            a[i][j]=x;
+            fre[x]++;
         }
     }
     for(int i=0;i<m;i++){
         for(int j=0;j<m;j++){
-            cin>>b[i][j];
+            int x;
+            cin>>x;
+            b[i][j]=x;
+            if(fre[x]==0){
+                cout<<"FALSE"<<endl;
+                return 0;
+            }
+            fre[x]--;
         }
     }
-    
+    cout<<"TRUE"<<endl;
+    return 0;
     
 }
 
