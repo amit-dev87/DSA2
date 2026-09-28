@@ -82,17 +82,17 @@ Therefore, no energy is required.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:45:29.997Z  
+**Submitted:** 2026-09-28T13:48:03.915Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	int n,sum=0;
-	int m=INT_MAX;
+	long long n,sum=0;
+	long long m=LLONG_MAX;
 	cin>>n;
-    vector<int>a(n);
+    vector<long long>a(n);
     for(int i=0;i<n;i++){
         cin>>a[i];
         m=min(m,a[i]);
