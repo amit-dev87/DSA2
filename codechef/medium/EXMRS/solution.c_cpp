@@ -5,6 +5,6 @@ int main() {
 	int c,m,w,p,r;
 	cin>>c>>m>>w>>p>>r;
 	int total=c*m-w*p;
-	total>=r?"yes":"no";
+	total>=r?cout<<"yes"<<endl:cout<<"no"<<endl;
 
 }
