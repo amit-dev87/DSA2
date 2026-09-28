@@ -82,7 +82,7 @@ Therefore, no energy is required.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:43:32.962Z  
+**Submitted:** 2026-09-28T13:44:24.158Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
