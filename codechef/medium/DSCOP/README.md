@@ -83,7 +83,7 @@ Therefore, the minimum possible price is $321$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:50:30.205Z  
+**Submitted:** 2026-09-28T13:53:30.214Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -93,10 +93,28 @@ int main() {
 	int t;
 	cin>>t;
 	while(t--){
-	    int n;
-	    cin>>n;
-	    
-	}
+	    string n;
+        cin >> n;
+    
+        int pos = n.size() - 1;
+    
+        for(int i = 0; i < n.size() - 1; i++) {
+            if(n[i] > n[i + 1]) {
+                pos = i;
+                break;
+            }
+        }
+    
+        n.erase(pos, 1);
+    
+        int i = 0;
+        while(i < n.size() - 1 && n[i] == '0') {
+            i++;
+        }
+    
+        cout << n.substr(i)<<endl;
+    
+    	}
 
 }
 
