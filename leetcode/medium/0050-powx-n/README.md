@@ -47,8 +47,8 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.4 MB (beats 93.06%)  
-**Submitted:** 2026-10-01T03:49:34.151Z  
+**Memory:** 8.5 MB (beats 71.71%)  
+**Submitted:** 2026-10-01T03:50:05.008Z  
 
 ```cpp
 class Solution {
