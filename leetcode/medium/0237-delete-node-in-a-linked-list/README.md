@@ -56,8 +56,8 @@ Explanation: You are given the third node with value 1, the linked list should b
 
 **Language:** C++  
 **Runtime:** 10 ms (beats 34.98%)  
-**Memory:** 12.5 MB (beats 21.54%)  
-**Submitted:** 2026-10-02T03:47:07.839Z  
+**Memory:** 12.3 MB (beats 55.98%)  
+**Submitted:** 2026-10-02T03:47:16.167Z  
 
 ```cpp
 /**
