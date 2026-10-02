@@ -55,9 +55,9 @@ Explanation: You are given the third node with value 1, the linked list should b
 ## Solution
 
 **Language:** C++  
-**Runtime:** 7 ms (beats 55.33%)  
-**Memory:** 12.4 MB (beats 21.54%)  
-**Submitted:** 2026-10-02T03:46:31.743Z  
+**Runtime:** 10 ms (beats 34.98%)  
+**Memory:** 12.5 MB (beats 21.54%)  
+**Submitted:** 2026-10-02T03:47:07.839Z  
 
 ```cpp
 /**
@@ -71,9 +71,8 @@ Explanation: You are given the third node with value 1, the linked list should b
 class Solution {
 public:
     void deleteNode(ListNode* node) {
-        
-        node->val = node->next->val;
-        node->next = node->next->next;
+        node->val=node->next->val;
+        node->next=node->next->next;
     }
 };
 ```
