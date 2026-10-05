@@ -44,7 +44,7 @@ Explanation: The boundary traversal is: [12, 11, 3, 4]
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T15:52:29.043Z  
+**Submitted:** 2026-10-05T15:56:09.212Z  
 
 ```cpp
 class Solution {
@@ -62,18 +62,20 @@ class Solution {
             ans.push_back(mat[n][right]);
         }
         right--;
+
         if(top<=bottom){
             for(int n = right ; n >= left ; n--){
             ans.push_back(mat[bottom][n]);
         }
         bottom--;
+        }
         if(left<=right){
             for(int n = bottom ; n >= top ; n--){
             ans.push_back(mat[n][left]);
         }
         left++;
         }
-        }
+
         return ans;
     }
 };
