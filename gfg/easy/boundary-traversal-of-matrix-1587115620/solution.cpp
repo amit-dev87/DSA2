@@ -13,18 +13,20 @@ class Solution {
             ans.push_back(mat[n][right]);
         }
         right--;
+
         if(top<=bottom){
             for(int n = right ; n >= left ; n--){
             ans.push_back(mat[bottom][n]);
         }
         bottom--;
+        }
         if(left<=right){
             for(int n = bottom ; n >= top ; n--){
             ans.push_back(mat[n][left]);
         }
         left++;
         }
-        }
+
         return ans;
     }
 };
