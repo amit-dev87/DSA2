@@ -32,7 +32,7 @@ For i = 1, res[i] is 12.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T12:35:42.229Z  
+**Submitted:** 2026-10-07T12:50:36.936Z  
 
 ```cpp
 class Solution {
