@@ -40,9 +40,9 @@ Output: [2,3,6,7,1,5,4]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-10-08T03:03:41.631Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 15.7 MB (beats 26.90%)  
+**Submitted:** 2026-10-08T03:03:51.548Z  
 
 ```cpp
 /**
