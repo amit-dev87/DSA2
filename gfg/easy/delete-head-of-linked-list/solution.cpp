@@ -14,8 +14,10 @@ public:
 class Solution {
   public:
     Node *deleteHead(Node *head) {
-        Node*temp=head;
-        temp=temp->next;
+        if(head==NULL){
+            return NULL;
+        }
+        Node*temp=head->next;
         head->next=NULL;
         delete head;
         head=temp;
