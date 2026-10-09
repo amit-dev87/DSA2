@@ -35,7 +35,7 @@ Explanation: After deleting head from the given linked list, we'll be left with 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-09T07:51:08.558Z  
+**Submitted:** 2026-10-09T07:52:02.855Z  
 
 ```cpp
 /* Structure of Linked List Node
@@ -54,8 +54,10 @@ public:
 class Solution {
   public:
     Node *deleteHead(Node *head) {
-        Node*temp=head;
-        temp=temp->next;
+        if(head==NULL){
+            return NULL;
+        }
+        Node*temp=head->next;
         head->next=NULL;
         delete head;
         head=temp;
