@@ -13,9 +13,6 @@ class Node {
 class Solution {
   public:
     Node* removeLastNode(Node* head) {
-        if(head==NULL){
-            return NULL;
-        }
         if(head->next==NULL){
             delete head;
             return NULL;
