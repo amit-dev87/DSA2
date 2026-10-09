@@ -29,7 +29,7 @@ Explanation: After deleting tail from the given linked list, we'll be left with 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-09T08:16:19.386Z  
+**Submitted:** 2026-10-09T08:16:35.035Z  
 
 ```cpp
 /* Linked List Node Structure
@@ -47,6 +47,9 @@ class Node {
 class Solution {
   public:
     Node* removeLastNode(Node* head) {
+        if(head==NULL){
+            return NULL;
+        }
         if(head->next==NULL){
             delete head;
             return NULL;
