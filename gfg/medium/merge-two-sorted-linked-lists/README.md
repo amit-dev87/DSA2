@@ -29,7 +29,7 @@ Explanation:
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-10T15:13:11.570Z  
+**Submitted:** 2026-10-10T15:13:44.115Z  
 
 ```cpp
 /*  Structure of Linked List Node
