@@ -31,6 +31,8 @@ class Solution {
             temp->next=list2;
         }
         
-        return newNode->next;
+        Node* head=newNode->next;
+        delete newNode;
+        return head;
     }
 };
