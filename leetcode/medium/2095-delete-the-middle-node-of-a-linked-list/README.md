@@ -56,9 +56,9 @@ Node 0 with value 2 is the only node remaining after removing node 1.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-10-10T09:12:41.458Z  
+**Runtime:** 8 ms (beats 8.53%)  
+**Memory:** 312 MB (beats 54.95%)  
+**Submitted:** 2026-10-10T09:45:06.330Z  
 
 ```cpp
 class Solution {
@@ -68,7 +68,6 @@ public:
             return NULL;
         }
         if(head->next == NULL){
-            delete head;
             return NULL;
         }
 
@@ -82,7 +81,7 @@ public:
             fast = fast->next->next;
         }
 
-        prev->next = prev->next->next;
+        prev->next = slow->next;
         delete slow;
         return head;
     }
