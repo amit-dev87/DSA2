@@ -5,7 +5,6 @@ public:
             return NULL;
         }
         if(head->next == NULL){
-            delete head;
             return NULL;
         }
 
@@ -19,7 +18,7 @@ public:
             fast = fast->next->next;
         }
 
-        prev->next = prev->next->next;
+        prev->next = slow->next;
         delete slow;
         return head;
     }
