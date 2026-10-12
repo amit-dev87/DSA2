@@ -46,25 +46,29 @@ Output: [1,0]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 4 ms (beats 15.55%)  
-**Memory:** 14.7 MB (beats 17.52%)  
-**Submitted:** 2026-10-12T03:22:24.363Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 13.9 MB (beats 80.58%)  
+**Submitted:** 2026-10-12T03:37:06.789Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> singleNumber(vector<int>& nums) {
     vector<int>ans;
-    unordered_map<int,int>freq;
-    for(int num:nums){
-          freq[num]++;
+    long long c = 0;
+    for(int i : nums){
+        c^=i;
     }
-    for(int n : nums){
-        if(freq[n]==1){
-            ans.push_back(n);
+    int bit = c & (-c);
+    int a = 0 , b = 0;
+    for(int num : nums){
+        if(num & bit){
+            a^=num;
+        }else{
+            b^=num;
         }
     }
-    return ans;
+    return {a , b};
     }
 };
 ```
