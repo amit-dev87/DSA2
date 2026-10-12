@@ -42,9 +42,9 @@ Hence, the sum of the squares of all special elements of nums is nums[1]  *nums[
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 9.02%)  
-**Memory:** 40.2 MB (beats 9.32%)  
-**Submitted:** 2026-10-12T03:42:22.946Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-10-12T03:43:18.046Z  
 
 ```cpp
 class Solution {
@@ -53,8 +53,8 @@ public:
         int n = nums.size();
         int sum = 0;
         for(int i = 1;i <= n ; i++){
-            if(n%i==0){
-                sum+=nums[i-1]*nums[i-1];
+            if( n % i == 0){
+                sum += nums[i-1] * nums[i-1];
             }
         }
         return sum;
