@@ -30,7 +30,7 @@ Let's learn and have fun.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-13T04:54:10.965Z  
+**Submitted:** 2026-10-13T04:54:16.583Z  
 
 ```c_cpp
 #include <iostream>
