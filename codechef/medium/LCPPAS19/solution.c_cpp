@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout<<"I\n"<<"love\n"<<"CodeChef"<<endl;
+
+    return 0;
+}
