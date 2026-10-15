@@ -42,8 +42,8 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-10-15T13:32:08.871Z  
+**Memory:** 8 MB  
+**Submitted:** 2026-10-15T13:35:37.268Z  
 
 ```cpp
 class Solution {
@@ -57,6 +57,14 @@ public:
         for(int i=0;i<nums.size();i++){
             c*=nums[i];
             m = max (m , c);
+            if(c<0){
+                c=1;
+            }
+        }
+        if(m==0){
+            for(int i=0;i<nums.size();i++){
+                m = max(m,nums[i]);
+            }
         }
         return m;
     }
