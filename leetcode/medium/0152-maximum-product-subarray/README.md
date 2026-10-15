@@ -42,15 +42,18 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-10-15T13:30:06.676Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-10-15T13:32:08.871Z  
 
 ```cpp
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
         int c=1;
-        int m =0;
+        int m =-10;
+        if(nums.size()==1){
+            return nums[0];
+        }
         for(int i=0;i<nums.size();i++){
             c*=nums[i];
             m = max (m , c);
