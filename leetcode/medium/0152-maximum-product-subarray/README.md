@@ -41,9 +41,9 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-10-15T13:35:37.268Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 17.9 MB (beats 26.06%)  
+**Submitted:** 2026-10-15T13:40:08.072Z  
 
 ```cpp
 class Solution {
@@ -51,19 +51,19 @@ public:
     int maxProduct(vector<int>& nums) {
         int c=1;
         int m =-10;
-        if(nums.size()==1){
-            return nums[0];
-        }
         for(int i=0;i<nums.size();i++){
             c*=nums[i];
             m = max (m , c);
-            if(c<0){
+            if( c == 0 ){
                 c=1;
             }
         }
-        if(m==0){
-            for(int i=0;i<nums.size();i++){
-                m = max(m,nums[i]);
+        c=1;
+        for(int i = nums.size()-1 ; i>=0; i--){
+            c*=nums[i];
+            m = max(m,c);
+            if( c == 0 ){
+                c=1;
             }
         }
         return m;
