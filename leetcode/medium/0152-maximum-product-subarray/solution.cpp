@@ -3,19 +3,19 @@ public:
     int maxProduct(vector<int>& nums) {
         int c=1;
         int m =-10;
-        if(nums.size()==1){
-            return nums[0];
-        }
         for(int i=0;i<nums.size();i++){
             c*=nums[i];
             m = max (m , c);
-            if(c<0){
+            if( c == 0 ){
                 c=1;
             }
         }
-        if(m==0){
-            for(int i=0;i<nums.size();i++){
-                m = max(m,nums[i]);
+        c=1;
+        for(int i = nums.size()-1 ; i>=0; i--){
+            c*=nums[i];
+            m = max(m,c);
+            if( c == 0 ){
+                c=1;
             }
         }
         return m;
