@@ -77,9 +77,9 @@ Explanation: The two lists do not intersect, so return null.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1941 ms (beats 5.02%)  
-**Memory:** 24.1 MB (beats 14.17%)  
-**Submitted:** 2026-10-17T10:14:09.929Z  
+**Runtime:** 58 ms (beats 44.53%)  
+**Memory:** 23.9 MB (beats 54.50%)  
+**Submitted:** 2026-10-17T10:21:54.748Z  
 
 ```cpp
 /**
@@ -94,18 +94,20 @@ class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         ListNode * temp1 = headA;
-        while(temp1 != NULL){
-            ListNode* temp2 = headB;
-            while(temp2 != NULL){
-                if(temp1 == temp2){
-                    return temp1;
-                }else{
-                    temp2=temp2->next;
-                }
+        ListNode* temp2 = headB;
+        while(temp1 != temp2){
+            if(temp1 == nullptr){
+               temp1 = headB; 
+            }else{
+                temp1 = temp1 -> next;
             }
-            temp1 = temp1->next;
+            if(temp2 == nullptr){
+                temp2 = headA;
+            }else{
+                temp2 = temp2 -> next;
+            }
         }
-        return {};
+        return temp1;
     }
 };
 ```
