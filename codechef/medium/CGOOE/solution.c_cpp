@@ -16,7 +16,7 @@ int main() {
 	        bool isA = true;
 	        int key = arr[i];
 	        for(int j = i+1 ; j < n ; j++){
-	            if(key<arr[j]){
+	            if(key>=arr[j]){
 	                isA = false;
 	                break;
 	            }
