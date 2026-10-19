@@ -66,7 +66,7 @@ The total learning value is $9 + 13 = 22$, which is the maximum possible.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:36:53.930Z  
+**Submitted:** 2026-10-19T14:37:51.924Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
