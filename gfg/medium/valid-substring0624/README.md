@@ -37,7 +37,7 @@ s[i] ∈ { '(', ')' }
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T02:52:00.204Z  
+**Submitted:** 2026-10-19T02:52:45.700Z  
 
 ```cpp
 class Solution {
