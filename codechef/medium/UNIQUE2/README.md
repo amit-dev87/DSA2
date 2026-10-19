@@ -59,7 +59,7 @@ The distinct elements are $12$, $7$, $4$, $15$, and $9$, in the order of their f
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T13:48:35.771Z  
+**Submitted:** 2026-10-19T13:55:18.993Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -69,13 +69,17 @@ int main() {
 	int n;
 	cin>>n;
 	int arr[n];
-	set<int>st;
+	vector<int>ans;
+	unordered_map<int,int>m;
 	for(int i = 0 ; i < n ; i++){
-	    int m ;
-	    cin>>m;
-	    st.insert(m);
+	    int a;
+	    cin>>a;
+	    if(m[a]==0){
+	        ans.push_back(a);
+	    }
+	    m[a]++;
 	}
-	for( auto i : st){
+	for(int i : ans){
 	    cout<<i<<" ";
 	}
 	
