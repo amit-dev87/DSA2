@@ -52,7 +52,7 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:43:52.934Z  
+**Submitted:** 2026-10-19T14:46:32.075Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -72,7 +72,7 @@ int main() {
 	    for(int i = 0 ; i < n ; i++){
 	        bool isA = true;
 	        int key = arr[i];
-	        for(int j = i+1 ; j < n ; j++){
+	        for (int j = max(0, i - 5); j < i; j++) {
 	            if(key>=arr[j]){
 	                isA = false;
 	                break;
