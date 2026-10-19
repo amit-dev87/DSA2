@@ -77,7 +77,7 @@ Note that the subarrays are traversed from left to right.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:35:10.940Z  
+**Submitted:** 2026-10-19T14:27:29.922Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -87,21 +87,22 @@ int main() {
 	int t ;
 	cin>>t;
 	while(t--){
-	    int n , x ;
+	    int n , x ,sum = 0;
 	     cin>>n>>x;
 	     int a[n];
-	     for(int i =0 ; i < n - x ; i++){
+	     for(int i =0 ; i < n ; i++){
 	         cin>>a[i];
 	     }
 	     for(int i = 0 ; i < x ; i++){
-	         int  m = a[i];
-	         for(int j = i+1 ; j < i+x ;j++){
-	             m = max(m , a[j]);
-	         }
-	         cout<<m<<" ";
+	         sum += a[i];
 	     }
-	     cout<<endl;
-	     
+	     int m = sum;
+	     for(int i = x ; i < n ; i++){
+	         sum -= a[i-x];
+	         sum += a[i];
+	         m = max(m , sum);
+	     }
+	     cout<<m<<endl;
 	}
 
 }
