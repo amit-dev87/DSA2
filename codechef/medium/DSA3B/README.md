@@ -77,7 +77,7 @@ Note that the subarrays are traversed from left to right.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:26:59.332Z  
+**Submitted:** 2026-10-19T14:27:25.329Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
