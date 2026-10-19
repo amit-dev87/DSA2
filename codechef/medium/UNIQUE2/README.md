@@ -59,7 +59,7 @@ The distinct elements are $12$, $7$, $4$, $15$, and $9$, in the order of their f
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T13:56:01.640Z  
+**Submitted:** 2026-10-19T13:56:08.110Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
