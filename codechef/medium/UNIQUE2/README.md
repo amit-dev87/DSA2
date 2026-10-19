@@ -59,7 +59,7 @@ The distinct elements are $12$, $7$, $4$, $15$, and $9$, in the order of their f
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T13:38:21.175Z  
+**Submitted:** 2026-10-19T13:39:31.442Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -70,7 +70,7 @@ int main() {
 	cin>>n;
 	int arr[n];
 	for(int i = 0 ; i < n ; i++){
-	    cin<<arr[i];
+	    cin>>arr[i];
 	}
 	set<int>st;
 	for(int i : arr){
