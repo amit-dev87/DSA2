@@ -52,7 +52,7 @@ At position $7$, the value $410$ is smaller than the previous five values: $600,
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-19T14:43:26.847Z  
+**Submitted:** 2026-10-19T14:43:52.934Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
