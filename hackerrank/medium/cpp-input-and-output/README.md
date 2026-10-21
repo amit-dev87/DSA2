@@ -1,4 +1,4 @@
-# Say "Hello, World!" With C++
+# Input and Output
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -56,15 +56,21 @@ Print the sum of the three numbers on a single line.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T09:57:06.433Z  
+**Submitted:** 2026-10-21T09:59:00.472Z  
 
 ```cpp
-#include <iostream>
+#include <cmath>
 #include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
+
 int main() {
-    printf("Hello, World!");
+    int n , m , j;
+    cin>>n>>m>>j;  
+    cout<<n+m+j<<endl; 
     return 0;
 }
 
