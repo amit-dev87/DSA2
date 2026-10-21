@@ -1,8 +1,14 @@
-#include <iostream>
+#include <cmath>
 #include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
 
+
 int main() {
-    printf("Hello, World!");
+    int n , m , j;
+    cin>>n>>m>>j;  
+    cout<<n+m+j<<endl; 
     return 0;
 }
