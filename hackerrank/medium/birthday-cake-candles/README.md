@@ -1,4 +1,4 @@
-# Mini-Max Sum
+# Birthday Cake Candles
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -40,7 +40,7 @@ The second line contains $n$ space-separated integers, where each integer $i$ de
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T08:31:46.677Z  
+**Submitted:** 2026-10-23T08:35:45.358Z  
 
 ```cpp
 #include <bits/stdc++.h>
@@ -52,39 +52,51 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'miniMaxSum' function below.
+ * Complete the 'birthdayCakeCandles' function below.
  *
- * The function accepts INTEGER_ARRAY arr as parameter.
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY candles as parameter.
  */
 
-void miniMaxSum(vector<int> arr) {
-    int mn = arr[0] ,mx = arr[0] ;
-    long long total = 0;
-  for(int i = 0 ; i < arr.size() ; i++){
-    total += arr[i];
-    mn = min(mn , arr[i]);
-    mx = max(mx , arr[i]);
-  } 
-  cout<<total  - mx<<" "<<total - mn<<endl;
+int birthdayCakeCandles(vector<int> candles) {
+    int mx = 0;
+    for(int  i = 0 ; i < candles.size() ; i++){
+        mx = max(mx , candles[i]);
+    }
+    int count = 0;
+    for(int  i = 0 ; i < candles.size() ; i++){
+        if(candles[i] == mx) count++;
+     }
+      return count;           
 }
 
 int main()
 {
+    ofstream fout(getenv("OUTPUT_PATH"));
 
-    string arr_temp_temp;
-    getline(cin, arr_temp_temp);
+    string candles_count_temp;
+    getline(cin, candles_count_temp);
 
-    vector<string> arr_temp = split(rtrim(arr_temp_temp));
+    int candles_count = stoi(ltrim(rtrim(candles_count_temp)));
 
-    vector<int> arr(5);
+    string candles_temp_temp;
+    getline(cin, candles_temp_temp);
 
-    for (int i = 0; i < 5; i++) {
-        int arr_item = stoi(arr_temp[i]);
+    vector<string> candles_temp = split(rtrim(candles_temp_temp));
 
-        arr[i] = arr_item;
+    vector<int> candles(candles_count);
+
+    for (int i = 0; i < candles_count; i++) {
+        int candles_item = stoi(candles_temp[i]);
+
+        candles[i] = candles_item;
     }
 
-    miniMaxSum(arr);
+    int result = birthdayCakeCandles(candles);
+
+    fout << result << "\n";
+
+    fout.close();
 
     return 0;
 }
