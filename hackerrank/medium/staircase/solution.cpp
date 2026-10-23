@@ -4,23 +4,23 @@ using namespace std;
 
 string ltrim(const string &);
 string rtrim(const string &);
-vector<string> split(const string &);
 
 /*
- * Complete the 'plusMinus' function below.
+ * Complete the 'staircase' function below.
  *
- * The function accepts INTEGER_ARRAY arr as parameter.
+ * The function accepts INTEGER n as parameter.
  */
 
-void plusMinus(vector<int> arr) {
-    int posC = 0 , posN = 0 , pos0 = 0 , n = arr.size();
-    for(int i : arr ){
-        if(i > 0) posC++;
-        else if(i < 0 ) posN++;
-        else pos0++;
+void staircase(int n) {
+    for(int i = 1 ; i <= n ; i++){
+        for(int j = n-i ; j >= 1 ; j--){
+            cout<<" ";
+        }
+        for(int j = 1 ; j <= i ; j++){
+            cout<<"#";
+        }
+        cout<<endl;
     }
-        cout << fixed << setprecision(6);
-        cout<<(double)posC/n<<endl<<(double)posN/n<<endl<<(double)pos0/n<<endl;
 }
 
 int main()
@@ -30,20 +30,7 @@ int main()
 
     int n = stoi(ltrim(rtrim(n_temp)));
 
-    string arr_temp_temp;
-    getline(cin, arr_temp_temp);
-
-    vector<string> arr_temp = split(rtrim(arr_temp_temp));
-
-    vector<int> arr(n);
-
-    for (int i = 0; i < n; i++) {
-        int arr_item = stoi(arr_temp[i]);
-
-        arr[i] = arr_item;
-    }
-
-    plusMinus(arr);
+    staircase(n);
 
     return 0;
 }
@@ -68,21 +55,4 @@ string rtrim(const string &str) {
     );
 
     return s;
-}
-
-vector<string> split(const string &str) {
-    vector<string> tokens;
-
-    string::size_type start = 0;
-    string::size_type end = 0;
-
-    while ((end = str.find(" ", start)) != string::npos) {
-        tokens.push_back(str.substr(start, end - start));
-
-        start = end + 1;
-    }
-
-    tokens.push_back(str.substr(start));
-
-    return tokens;
 }
