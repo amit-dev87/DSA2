@@ -4,33 +4,42 @@ using namespace std;
 
 string ltrim(const string &);
 string rtrim(const string &);
+vector<string> split(const string &);
 
 /*
- * Complete the 'staircase' function below.
+ * Complete the 'miniMaxSum' function below.
  *
- * The function accepts INTEGER n as parameter.
+ * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
-void staircase(int n) {
-    for(int i = 1 ; i <= n ; i++){
-        for(int j = n-i ; j >= 1 ; j--){
-            cout<<" ";
-        }
-        for(int j = 1 ; j <= i ; j++){
-            cout<<"#";
-        }
-        cout<<endl;
-    }
+void miniMaxSum(vector<int> arr) {
+    int mn = arr[0] ,mx = arr[0] ;
+    long long total = 0;
+  for(int i = 0 ; i < arr.size() ; i++){
+    total += arr[i];
+    mn = min(mn , arr[i]);
+    mx = max(mx , arr[i]);
+  } 
+  cout<<total  - mx<<" "<<total - mn<<endl;
 }
 
 int main()
 {
-    string n_temp;
-    getline(cin, n_temp);
 
-    int n = stoi(ltrim(rtrim(n_temp)));
+    string arr_temp_temp;
+    getline(cin, arr_temp_temp);
 
-    staircase(n);
+    vector<string> arr_temp = split(rtrim(arr_temp_temp));
+
+    vector<int> arr(5);
+
+    for (int i = 0; i < 5; i++) {
+        int arr_item = stoi(arr_temp[i]);
+
+        arr[i] = arr_item;
+    }
+
+    miniMaxSum(arr);
 
     return 0;
 }
@@ -55,4 +64,21 @@ string rtrim(const string &str) {
     );
 
     return s;
+}
+
+vector<string> split(const string &str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
 }
