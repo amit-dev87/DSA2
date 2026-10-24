@@ -1,4 +1,4 @@
-# Birthday Cake Candles
+# Time Conversion
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -45,104 +45,50 @@ A single string $s$ that represents a time in $12$-hour clock format (i.e.: $\te
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T08:35:56.649Z  
+**Submitted:** 2026-10-24T08:04:00.854Z  
 
 ```cpp
 #include <bits/stdc++.h>
 
 using namespace std;
 
-string ltrim(const string &);
-string rtrim(const string &);
-vector<string> split(const string &);
-
 /*
- * Complete the 'birthdayCakeCandles' function below.
+ * Complete the 'timeConversion' function below.
  *
- * The function is expected to return an INTEGER.
- * The function accepts INTEGER_ARRAY candles as parameter.
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
  */
 
-int birthdayCakeCandles(vector<int> candles) {
-    int mx = 0;
-    for(int  i = 0 ; i < candles.size() ; i++){
-        mx = max(mx , candles[i]);
+string timeConversion(string s) {
+    string period = s.substr(8,2);
+    int hour = stoi(s.substr(0 , 2));
+    if(period == "AM"){
+        if(hour == 12){
+            s.replace (0, 2 , "00");
+        }
+    }else{
+        if(hour != 12){
+            hour += 12;
+            s.replace(0 , 2 ,to_string(hour));
+        }
     }
-    int count = 0;
-    for(int  i = 0 ; i < candles.size() ; i++){
-        if(candles[i] == mx) count++;
-     }
-      return count;           
+    return s.substr(0,8);
 }
 
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
 
-    string candles_count_temp;
-    getline(cin, candles_count_temp);
+    string s;
+    getline(cin, s);
 
-    int candles_count = stoi(ltrim(rtrim(candles_count_temp)));
-
-    string candles_temp_temp;
-    getline(cin, candles_temp_temp);
-
-    vector<string> candles_temp = split(rtrim(candles_temp_temp));
-
-    vector<int> candles(candles_count);
-
-    for (int i = 0; i < candles_count; i++) {
-        int candles_item = stoi(candles_temp[i]);
-
-        candles[i] = candles_item;
-    }
-
-    int result = birthdayCakeCandles(candles);
+    string result = timeConversion(s);
 
     fout << result << "\n";
 
     fout.close();
 
     return 0;
-}
-
-string ltrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
-
-    return s;
-}
-
-string rtrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
-
-    return s;
-}
-
-vector<string> split(const string &str) {
-    vector<string> tokens;
-
-    string::size_type start = 0;
-    string::size_type end = 0;
-
-    while ((end = str.find(" ", start)) != string::npos) {
-        tokens.push_back(str.substr(start, end - start));
-
-        start = end + 1;
-    }
-
-    tokens.push_back(str.substr(start));
-
-    return tokens;
 }
 
 ```
