@@ -64,7 +64,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T13:56:01.675Z  
+**Submitted:** 2026-10-26T13:56:15.701Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,7 +74,7 @@ int main() {
 	int t;
 	cin>>t;
 	while(t--){
-	    int n , cpos = 0 cneg = 0;
+	    int n , cpos = 0 , cneg = 0;
 	    cin>>n;
 	    for(int i = 1 ; i <= n ; i++){
 	        int x;
