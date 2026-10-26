@@ -64,7 +64,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T13:57:16.916Z  
+**Submitted:** 2026-10-26T13:58:20.855Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -85,15 +85,11 @@ int main() {
 	            cpos++;
 	        }
 	    }
-	    if(cneg == n || cpos == n){
-	        cout<<n/2<<endl;
-	    }else if(cneg == cpos){
-	        cout<<0<<endl;
-	    }else if(n % 2 != 0){
-	        cout<<-1<<endl;
-	    }else {
-	        cout<<n/2 - min(cneg,cpos)<<endl;
-	    }
+        if (n % 2 != 0) {
+            cout << -1 << endl;
+        } else {
+            cout << abs(cpos - cneg) / 2 << endl;
+        }
 	}
 
 }
