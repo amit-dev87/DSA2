@@ -5,7 +5,7 @@ int main() {
 	int t;
 	cin>>t;
 	while(t--){
-	    int n , cpos = 0 cneg = 0;
+	    int n , cpos = 0 , cneg = 0;
 	    cin>>n;
 	    for(int i = 1 ; i <= n ; i++){
 	        int x;
