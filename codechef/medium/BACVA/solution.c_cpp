@@ -5,7 +5,7 @@ int main() {
 	int t;
 	cin>>t;
 	while(t--){
-	    int a,sum = 0;
+	    long long a,sum = 0;
 	    cin>>a;
 	    if(a==0){
 	        cout<<"invalid"<<endl;
