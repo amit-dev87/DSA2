@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n , cpos = 0 cneg = 0;
+	    cin>>n;
+	    for(int i = 1 ; i <= n ; i++){
+	        int x;
+	        cin>>x;
+	        if(x == -1){
+	            cneg++;
+	        }else{
+	            cpos++;
+	        }
+	    }
+	    if(cneg == n || cpos == n){
+	        cout<<n/2<<endl;
+	    }else if(cneg == cpos){
+	        cout<<0<<endl;
+	    }else if(n % 2 != 0){
+	        cout<<-1<<endl;
+	    }else {
+	        cout<<n/2 - min(cneg,cpos)<<endl;
+	    }
+	}
+
+}
