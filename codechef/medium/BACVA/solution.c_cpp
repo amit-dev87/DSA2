@@ -7,7 +7,10 @@ int main() {
 	while(t--){
 	    int a,sum = 0;
 	    cin>>a;
-	    while(a>0){
+	    if(a==0){
+	        cout<<"invalid"<<endl;
+	    }
+	    while(a!=0){
 	        sum+=a%10;
 	        a/=10;
 	    }
