@@ -70,9 +70,9 @@ step	nums	averages
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-10-31T12:25:50.025Z  
+**Runtime:** 1 ms (beats 26.29%)  
+**Memory:** 25.5 MB (beats 78.31%)  
+**Submitted:** 2026-10-31T12:25:54.288Z  
 
 ```cpp
 class Solution {
