@@ -30,7 +30,7 @@ Explanation: Element 20 at index 1 is a peak since 10 < 20 > 15. Index 5 (value 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-01T13:31:06.275Z  
+**Submitted:** 2026-11-01T13:31:44.075Z  
 
 ```cpp
 class Solution {
@@ -44,7 +44,7 @@ class Solution {
 
         if(arr[n-1] > arr[n-2]) return n-1;
 
-        for(int i = 1 ; i < arr.size()-1 ; i++){
+        for(int i = 1 ; i < n - 1 ; i++){
             if(arr[i-1] < arr[i] && arr[i] > arr[i+1]){
                 return i;
             }
