@@ -55,7 +55,7 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-02T15:04:43.759Z  
+**Submitted:** 2026-11-02T15:03:04.847Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,12 +66,20 @@ int main() {
 	cin>>t;
 	while(t--){
 	    int n;
+	    int count = 0;
 	    cin>>n;
-	   if(n%4 == 2){
-	       cout<<"yes"<<endl;
-	   }else{
-	       cout<<"no"<<endl;
-	   }
+	    while(n!=4){
+	        n/=4;
+	    }
+	    while(n!=0){
+	        n/=2;
+	        count++;
+	    }
+	    if(count >= 1){
+	        cout<<"yes"<<endl;
+	    }else{
+	        cout<<"no"<<endl;
+	    }
 	}
 
 }
