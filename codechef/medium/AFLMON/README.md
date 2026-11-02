@@ -53,7 +53,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-02T15:17:24.846Z  
+**Submitted:** 2026-11-02T15:18:30.378Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -73,7 +73,7 @@ int main() {
 	    for(int i = 0 ; i < n ; i++){
 	        int c1 = 0 , c2 = 0;
 	        for(int j = 0 ; j < n ; j++){
-	            if(a[i] <= a[j]){
+	            if(a[j] <= a[i]){
 	                c1++;
 	            }else{
 	                c2++;
