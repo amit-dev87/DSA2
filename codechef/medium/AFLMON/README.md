@@ -53,7 +53,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-02T15:15:37.846Z  
+**Submitted:** 2026-11-02T15:17:24.846Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -78,10 +78,10 @@ int main() {
 	            }else{
 	                c2++;
 	            }
-	            if(c1 > c2){
-	                ans++;
-	            }
 	        }
+	        if(c1 > c2){
+	           ans++;
+	            }
 	    }
 	  cout<<ans<<endl;  
 	}
