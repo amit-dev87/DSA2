@@ -41,7 +41,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-02T15:34:08.851Z  
+**Submitted:** 2026-11-02T15:37:59.765Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -57,7 +57,7 @@ int main() {
 	    }
 	}
 	for(int i = 0 ; i < n ; i++){
-	    for(int j = 0 ; j < n ; j++){
+	    for(int j = 0 ; j < m ; j++){
 	        vector<int>ans;
 	        int x = i , y = j;
 	        while(x < n  && y < m){
@@ -69,7 +69,7 @@ int main() {
 	        x = i, y = j;
 	        int k = 0;
 	        while(x < n && y < m){
-	            a[x][y] == ans[k++];
+	            a[x][y] = ans[k++];
 	            x++;
 	            y++;
 	        }
