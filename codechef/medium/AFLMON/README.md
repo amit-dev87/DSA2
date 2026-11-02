@@ -53,7 +53,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-02T15:08:52.866Z  
+**Submitted:** 2026-11-02T15:15:37.846Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -64,12 +64,26 @@ int main() {
 	cin>>t;
 	while(t--){
 	    int n;
-	    cin>>;
-	    int arr[n];
+	    cin>>n;
+	    int a[n];
 	    for(int i = 0 ; i < n ; i++){
-	        cin>>arr[i];
+	        cin>>a[i];
 	    }
-	    
+	    int ans = 0 ;
+	    for(int i = 0 ; i < n ; i++){
+	        int c1 = 0 , c2 = 0;
+	        for(int j = 0 ; j < n ; j++){
+	            if(a[i] <= a[j]){
+	                c1++;
+	            }else{
+	                c2++;
+	            }
+	            if(c1 > c2){
+	                ans++;
+	            }
+	        }
+	    }
+	  cout<<ans<<endl;  
 	}
 
 }
