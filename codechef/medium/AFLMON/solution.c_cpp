@@ -20,10 +20,10 @@ int main() {
 	            }else{
 	                c2++;
 	            }
-	            if(c1 > c2){
-	                ans++;
-	            }
 	        }
+	        if(c1 > c2){
+	           ans++;
+	            }
 	    }
 	  cout<<ans<<endl;  
 	}
