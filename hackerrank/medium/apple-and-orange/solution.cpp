@@ -4,64 +4,95 @@ using namespace std;
 
 string ltrim(const string &);
 string rtrim(const string &);
+vector<string> split(const string &);
 
 /*
- * Complete the 'gradingStudents' function below.
+ * Complete the 'countApplesAndOranges' function below.
  *
- * The function is expected to return an INTEGER_ARRAY.
- * The function accepts INTEGER_ARRAY grades as parameter.
+ * The function accepts following parameters:
+ *  1. INTEGER s
+ *  2. INTEGER t
+ *  3. INTEGER a
+ *  4. INTEGER b
+ *  5. INTEGER_ARRAY apples
+ *  6. INTEGER_ARRAY oranges
  */
 
-vector<int> gradingStudents(vector<int> grades) {
-    vector<int>ans;
-    for(int i : grades){
-        if(i < 38){
-            ans.push_back(i);
-        }else{
-            int n = round((i+4)/5)*5;
-            if(n-i >= 3){
-                ans.push_back(i);
-            }else{
-                ans.push_back(n);
-            }
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+    int countApples = 0 , countOranges = 0 ;
+    for(int i = 0 ; i < apples.size() ; i++){
+        int pos = a + apples[i];
+        if(pos >= s && pos <=t){
+            countApples++;
         }
     }
-    return ans;
-}
+    for(int i = 0 ; i < oranges.size() ; i++){
+        int pos = b + oranges[i];
+        if(pos >= s && pos <=t){
+            countOranges++;
+            }
+         }
+      cout<<countApples<<endl;
+      cout<<countOranges<<endl;                                          
+    }
+
 
 int main()
 {
-    ofstream fout(getenv("OUTPUT_PATH"));
+    string first_multiple_input_temp;
+    getline(cin, first_multiple_input_temp);
 
-    string grades_count_temp;
-    getline(cin, grades_count_temp);
+    vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
 
-    int grades_count = stoi(ltrim(rtrim(grades_count_temp)));
+    int s = stoi(first_multiple_input[0]);
 
-    vector<int> grades(grades_count);
+    int t = stoi(first_multiple_input[1]);
 
-    for (int i = 0; i < grades_count; i++) {
-        string grades_item_temp;
-        getline(cin, grades_item_temp);
+    string second_multiple_input_temp;
+    getline(cin, second_multiple_input_temp);
 
-        int grades_item = stoi(ltrim(rtrim(grades_item_temp)));
+    vector<string> second_multiple_input = split(rtrim(second_multiple_input_temp));
 
-        grades[i] = grades_item;
+    int a = stoi(second_multiple_input[0]);
+
+    int b = stoi(second_multiple_input[1]);
+
+    string third_multiple_input_temp;
+    getline(cin, third_multiple_input_temp);
+
+    vector<string> third_multiple_input = split(rtrim(third_multiple_input_temp));
+
+    int m = stoi(third_multiple_input[0]);
+
+    int n = stoi(third_multiple_input[1]);
+
+    string apples_temp_temp;
+    getline(cin, apples_temp_temp);
+
+    vector<string> apples_temp = split(rtrim(apples_temp_temp));
+
+    vector<int> apples(m);
+
+    for (int i = 0; i < m; i++) {
+        int apples_item = stoi(apples_temp[i]);
+
+        apples[i] = apples_item;
     }
 
-    vector<int> result = gradingStudents(grades);
+    string oranges_temp_temp;
+    getline(cin, oranges_temp_temp);
 
-    for (size_t i = 0; i < result.size(); i++) {
-        fout << result[i];
+    vector<string> oranges_temp = split(rtrim(oranges_temp_temp));
 
-        if (i != result.size() - 1) {
-            fout << "\n";
-        }
+    vector<int> oranges(n);
+
+    for (int i = 0; i < n; i++) {
+        int oranges_item = stoi(oranges_temp[i]);
+
+        oranges[i] = oranges_item;
     }
 
-    fout << "\n";
-
-    fout.close();
+    countApplesAndOranges(s, t, a, b, apples, oranges);
 
     return 0;
 }
@@ -86,4 +117,21 @@ string rtrim(const string &str) {
     );
 
     return s;
+}
+
+vector<string> split(const string &str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
 }
