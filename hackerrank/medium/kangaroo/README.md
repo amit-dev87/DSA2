@@ -1,4 +1,4 @@
-# Apple and Orange
+# Number Line Jumps
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -50,7 +50,7 @@ A single line of four space-separated integers denoting the respective values of
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T03:39:20.004Z  
+**Submitted:** 2026-11-04T03:51:53.012Z  
 
 ```cpp
 #include <bits/stdc++.h>
@@ -62,92 +62,46 @@ string rtrim(const string &);
 vector<string> split(const string &);
 
 /*
- * Complete the 'countApplesAndOranges' function below.
+ * Complete the 'kangaroo' function below.
  *
+ * The function is expected to return a STRING.
  * The function accepts following parameters:
- *  1. INTEGER s
- *  2. INTEGER t
- *  3. INTEGER a
- *  4. INTEGER b
- *  5. INTEGER_ARRAY apples
- *  6. INTEGER_ARRAY oranges
+ *  1. INTEGER x1
+ *  2. INTEGER v1
+ *  3. INTEGER x2
+ *  4. INTEGER v2
  */
 
-void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
-    int countApples = 0 , countOranges = 0 ;
-    for(int i = 0 ; i < apples.size() ; i++){
-        int pos = a + apples[i];
-        if(pos >= s && pos <=t){
-            countApples++;
-        }
+string kangaroo(int x1, int v1, int x2, int v2) {
+    if( v1 > v2 && (x2 - x1) % (v1 - v2) == 0 ){
+        return "YES";
+    }else{
+        return "NO";
     }
-    for(int i = 0 ; i < oranges.size() ; i++){
-        int pos = b + oranges[i];
-        if(pos >= s && pos <=t){
-            countOranges++;
-            }
-         }
-      cout<<countApples<<endl;
-      cout<<countOranges<<endl;                                          
-    }
-
+}
 
 int main()
 {
+    ofstream fout(getenv("OUTPUT_PATH"));
+
     string first_multiple_input_temp;
     getline(cin, first_multiple_input_temp);
 
     vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
 
-    int s = stoi(first_multiple_input[0]);
+    int x1 = stoi(first_multiple_input[0]);
 
-    int t = stoi(first_multiple_input[1]);
+    int v1 = stoi(first_multiple_input[1]);
 
-    string second_multiple_input_temp;
-    getline(cin, second_multiple_input_temp);
+    int x2 = stoi(first_multiple_input[2]);
 
-    vector<string> second_multiple_input = split(rtrim(second_multiple_input_temp));
+    int v2 = stoi(first_multiple_input[3]);
 
-    int a = stoi(second_multiple_input[0]);
+    string result = kangaroo(x1, v1, x2, v2);
 
-    int b = stoi(second_multiple_input[1]);
+    fout << result << "\n";
 
-    string third_multiple_input_temp;
-    getline(cin, third_multiple_input_temp);
-
-    vector<string> third_multiple_input = split(rtrim(third_multiple_input_temp));
-
-    int m = stoi(third_multiple_input[0]);
-
-    int n = stoi(third_multiple_input[1]);
-
-    string apples_temp_temp;
-    getline(cin, apples_temp_temp);
-
-    vector<string> apples_temp = split(rtrim(apples_temp_temp));
-
-    vector<int> apples(m);
-
-    for (int i = 0; i < m; i++) {
-        int apples_item = stoi(apples_temp[i]);
-
-        apples[i] = apples_item;
-    }
-
-    string oranges_temp_temp;
-    getline(cin, oranges_temp_temp);
-
-    vector<string> oranges_temp = split(rtrim(oranges_temp_temp));
-
-    vector<int> oranges(n);
-
-    for (int i = 0; i < n; i++) {
-        int oranges_item = stoi(oranges_temp[i]);
-
-        oranges[i] = oranges_item;
-    }
-
-    countApplesAndOranges(s, t, a, b, apples, oranges);
+    fout.close();
 
     return 0;
 }
