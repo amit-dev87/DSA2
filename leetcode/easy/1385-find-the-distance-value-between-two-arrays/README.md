@@ -61,26 +61,23 @@ Output: 1
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 36.95%)  
-**Memory:** 16.5 MB (beats 92.88%)  
-**Submitted:** 2026-11-05T03:17:30.663Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 16.6 MB (beats 75.81%)  
+**Submitted:** 2026-11-05T03:20:58.397Z  
 
 ```cpp
 class Solution {
 public:
     int findTheDistanceValue(vector<int>& arr1, vector<int>& arr2, int d) {
         int count = 0 ;
-        for(int  i = 0 ; i <  arr1.size() ; i++){
-            bool isValid = true;
-            for(int j = 0 ; j < arr2.size() ; j++){
-                if(abs(arr1[i] - arr2[j]) <= d){
-                    isValid = false;
-                    break;
-                }
+        for(int i : arr1){
+            for(int j : arr2){
+                if(abs(i - j)<= d){
+                    goto end;
+                }  
             }
-            if(isValid){
-                count++;
-            }
+            count++;
+            end:
         }
         return count;
     }
