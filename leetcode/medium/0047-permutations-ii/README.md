@@ -37,28 +37,20 @@ Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 85 ms (beats 5.01%)  
-**Memory:** 25 MB (beats 5.01%)  
-**Submitted:** 2026-11-05T02:16:13.650Z  
+**Runtime:** 1 ms (beats 76.29%)  
+**Memory:** 11.2 MB (beats 98.91%)  
+**Submitted:** 2026-11-05T02:19:27.148Z  
 
 ```cpp
 class Solution {
 public:
-    void getPerms(vector<int>&nums , int idx , set<vector<int>>&st){
-        if(idx == nums.size()) st.insert({nums});
-        for(int i = idx ; i < nums.size() ; i++){
-            swap(nums[idx] , nums[i]);
-            getPerms(nums,idx + 1 , st);
-            swap(nums[idx] , nums[i]);
-        }
-    }
+
     vector<vector<int>> permuteUnique(vector<int>& nums) {
-        set<vector<int>>st;
+        sort(nums.begin(),nums.end());
         vector<vector<int>>ans;
-        getPerms(nums , 0 , st);
-        for(auto i : st){
-            ans.push_back(i);
-        }
+        do{
+            ans.push_back(nums);  
+        }while(next_permutation(nums.begin(),nums.end()));
         return ans;
     }
 };
