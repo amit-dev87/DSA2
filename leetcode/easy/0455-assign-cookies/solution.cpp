@@ -4,13 +4,17 @@ public:
         sort(g.begin() , g.end());
         sort(s.begin() , s.end());
         int i = 0 , j = 0;
-        
+        int count = 0 ;
         while(i < g.size() && j < s.size()){
             if(g[i] <= s[j]){
-                i++; 
+                count++;
+                i++;
+                j++;
+            }else{
+                j++;
+
             }
-            j++;
         }
-        return i;
+        return count;
     }
 };
