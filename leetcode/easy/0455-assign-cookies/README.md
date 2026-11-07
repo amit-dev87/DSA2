@@ -47,9 +47,9 @@ You need to output 2.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 11 ms (beats 34.26%)  
-**Memory:** 44.8 MB (beats 43.37%)  
-**Submitted:** 2026-11-07T10:25:39.859Z  
+**Runtime:** 9 ms (beats 54.47%)  
+**Memory:** 45 MB (beats 10.04%)  
+**Submitted:** 2026-11-07T10:27:53.025Z  
 
 ```cpp
 class Solution {
@@ -58,14 +58,18 @@ public:
         sort(g.begin() , g.end());
         sort(s.begin() , s.end());
         int i = 0 , j = 0;
-        
+        int count = 0 ;
         while(i < g.size() && j < s.size()){
             if(g[i] <= s[j]){
-                i++; 
+                count++;
+                i++;
+                j++;
+            }else{
+                j++;
+
             }
-            j++;
         }
-        return i;
+        return count;
     }
 };
 ```
