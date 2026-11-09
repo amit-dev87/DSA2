@@ -57,7 +57,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T13:41:11.889Z  
+**Submitted:** 2026-11-09T13:42:17.050Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,7 +74,7 @@ int main() {
 	while(t--){
 	    int n , m ;
 	    cin>>n>>m;
-	    if(n ==1 || m ==1){
+	    if(n ==1 || m == 1){
 	        cout<<1<<endl;
 	    }else{
 	        cout<<hcf(n,m)<<endl;
