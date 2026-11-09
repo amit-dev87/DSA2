@@ -82,27 +82,15 @@ The only group is the single student at index $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:26:16.948Z  
+**Submitted:** 2026-11-09T14:37:54.862Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	int n;
-	cin>>n;
-	string s(n);
-    cin>>s;
-    int a = 0 , b = 0;
-    int m = 0 , p = 0 ;
-    while(b < n){
-        if(b == m){
-            b++;
-        }else{
-            a = b + 1;
-            p = b-1;
-        }
-    }
+	// your code goes here
+
 }
 
 ```
