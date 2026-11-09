@@ -55,7 +55,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:14:53.852Z  
+**Submitted:** 2026-11-09T14:13:37.657Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -76,9 +76,8 @@ int main() {
 	    for(int i = n-2 ; i >= 0  ; i--){
 	        if(arr[i] < m){
 	            ans = max(ans , n - 1 - i);
-	        }else{
-	            m = arr[i];
 	        }
+	        m = max (m , arr[i]);
 	    }
 	    cout<<ans<<endl;
 	}
