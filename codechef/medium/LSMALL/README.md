@@ -51,14 +51,34 @@ aba
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:27:15.839Z  
+**Submitted:** 2026-11-09T14:35:55.393Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    string s;
+	    cin>>s;
+	    int k;
+	    cin>>k;
+	    
+	    string st;
+	    int n = s.size();
+	    for(int i= 0 ; i  < n ; i++){
+	        while(!st.empty() && st.back() > s[i] && st.size() + n - i > k){
+	            st.pop_back();
+	        }
+	        if(st.size() < k){
+	            st.push_back(s[i]);
+	        }
+	    }
+	    cout << st <<endl;
+	     
+	}
 
 }
 
