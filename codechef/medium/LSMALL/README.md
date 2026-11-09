@@ -51,7 +51,7 @@ aba
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:26:39.857Z  
+**Submitted:** 2026-11-09T14:27:10.306Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
