@@ -64,14 +64,22 @@ Any matching prefix and suffix of length $3$ or more would overlap, so the answe
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:19:36.340Z  
+**Submitted:** 2026-11-09T14:24:04.618Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
+	string s;
+	cin>>s;
+	int n = s.size() , ans = 0;
+	for(int len = 0 ; len < n/2 ; len++){
+	    if(s.substr(0 , len) == s.substr(n - len , len)){
+	        ans = len;
+	    }
+	}
+	cout<<ans<<endl;
 
 }
 
