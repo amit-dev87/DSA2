@@ -15,9 +15,9 @@ int main() {
 	    int m = arr[n-1];
 	    for(int i = n-2 ; i >= 0  ; i--){
 	        if(m > arr[i]){
-	            count = max()
-	            count++;
+	            count = max(m , n - 1 - i);
 	        }
+	        m = max(m , arr[i]);
 	    }
 	    cout<<count<<endl;
 	}
