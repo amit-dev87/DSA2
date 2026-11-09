@@ -82,7 +82,7 @@ The only group is the single student at index $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T13:50:52.868Z  
+**Submitted:** 2026-11-09T14:26:16.948Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -92,9 +92,7 @@ int main() {
 	int n;
 	cin>>n;
 	string s(n);
-    for(int i = 0 ; i < n ; i++){
-        cin>>s[i];
-    }
+    cin>>s;
     int a = 0 , b = 0;
     int m = 0 , p = 0 ;
     while(b < n){
