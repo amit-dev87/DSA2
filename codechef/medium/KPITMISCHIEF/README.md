@@ -82,7 +82,7 @@ The only group is the single student at index $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:37:54.862Z  
+**Submitted:** 2026-11-09T14:38:39.848Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
