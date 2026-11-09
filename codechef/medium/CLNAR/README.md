@@ -55,7 +55,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T14:05:25.844Z  
+**Submitted:** 2026-11-09T14:07:01.851Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,8 +74,8 @@ int main() {
 	    int count = 0;
 	    int m = arr[n-1];
 	    for(int i = n-2 ; i >= 0  ; i--){
-	        if(m > arr[i]){
-	            count = max(m , n - 1 - i);
+	        if(arr[i] < m){
+	            count = max(count , n - 1 - i);
 	        }
 	        m = max(m , arr[i]);
 	    }
