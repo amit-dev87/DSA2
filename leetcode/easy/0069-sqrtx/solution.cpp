@@ -5,9 +5,7 @@ public:
     int ans = 0;
     while(i <= j){
         int mid = i + ((j-i)/2);
-        if((long long)mid * mid == x){
-            return mid;
-        }else if((long long)mid * mid > x){
+        if((long long)mid * mid > x){
             j = mid -1;
         }else{
             ans = mid;
