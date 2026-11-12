@@ -41,9 +41,9 @@ Explanation: The square root of 8 is 2.82842..., and since we round it down to t
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 32.89%)  
-**Memory:** 8.4 MB (beats 93.79%)  
-**Submitted:** 2026-11-12T02:21:02.832Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 8.7 MB (beats 15.30%)  
+**Submitted:** 2026-11-12T02:22:16.938Z  
 
 ```cpp
 class Solution {
@@ -53,9 +53,7 @@ public:
     int ans = 0;
     while(i <= j){
         int mid = i + ((j-i)/2);
-        if((long long)mid * mid == x){
-            return mid;
-        }else if((long long)mid * mid > x){
+        if((long long)mid * mid > x){
             j = mid -1;
         }else{
             ans = mid;
