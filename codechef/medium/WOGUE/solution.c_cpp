@@ -16,9 +16,10 @@ int main() {
 	            m[i] = 'B';
 	        }
 	    }
-	    for(int i : m){
-	        cout<<i<<endl;
+	    for(char i : m){
+	        cout<<i;
 	    }
+	    cout<<endl;
 	}
 
 }
