@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string a;
+	getline(cin , a);
+	string b;
+	getline(cin , b);
+	int n = a.size() , m = b.size();
+	if(n != m){
+	    cout<<""
+	}
+	
+
+}
