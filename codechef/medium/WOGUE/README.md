@@ -58,7 +58,7 @@ BGGGG
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T13:44:59.853Z  
+**Submitted:** 2026-11-16T13:46:04.773Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -79,9 +79,10 @@ int main() {
 	            m[i] = 'B';
 	        }
 	    }
-	    for(int i : m){
-	        cout<<i<<endl;
+	    for(char i : m){
+	        cout<<i;
 	    }
+	    cout<<endl;
 	}
 
 }
