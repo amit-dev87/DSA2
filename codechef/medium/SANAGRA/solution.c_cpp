@@ -3,12 +3,12 @@ using namespace std;
 bool isAnagram(string s , string t){
     int freq[256] = {0};
     for(char c : s){
-        if(c != ' '){
+        if(isalnum(c)){
             freq[tolower(c)]++;
         }
     }
     for(char c : t){
-        if(c != ' '){
+        if(isalnum(c)){
             freq[tolower(c)]--;
         }
     }
@@ -24,7 +24,7 @@ int main() {
 	getline(cin , a);
 	string b;
 	getline(cin , b);
-	if(isAnagram){
+	if(isAnagram(a,b)){
 	    cout<< "The sentences are anagrams.";
 	}else{
 	    cout<< "The sentences are not anagrams.";
