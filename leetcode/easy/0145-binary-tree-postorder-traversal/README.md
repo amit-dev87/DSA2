@@ -50,9 +50,9 @@ Given the `root` of a binary tree, return  *the postorder traversal of its node
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 5.87%)  
-**Memory:** 10.8 MB (beats 97.34%)  
-**Submitted:** 2026-11-16T10:36:09.020Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 11.1 MB (beats 40.75%)  
+**Submitted:** 2026-11-16T10:37:09.028Z  
 
 ```cpp
 /**
@@ -72,13 +72,19 @@ public:
         if(root == nullptr){
             return;
         }
+
         solve(root -> left , ans);
+
         solve(root -> right , ans);
+
         ans.push_back(root -> val);
     }
     vector<int> postorderTraversal(TreeNode* root) {
+
         vector<int>ans;
+
         solve(root , ans);
+        
         return ans;
     }
 };
