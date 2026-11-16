@@ -66,7 +66,7 @@ Both sentences contain `hello` twice and `world` once. Punctuation separates the
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T14:02:55.063Z  
+**Submitted:** 2026-11-16T14:06:55.343Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -74,12 +74,12 @@ using namespace std;
 bool isAnagram(string s , string t){
     int freq[256] = {0};
     for(char c : s){
-        if(c != ' '){
+        if(isalpha(c)){
             freq[tolower(c)]++;
         }
     }
     for(char c : t){
-        if(c != ' '){
+        if(isalpha(c)){
             freq[tolower(c)]--;
         }
     }
