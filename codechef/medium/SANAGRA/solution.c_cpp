@@ -3,12 +3,12 @@ using namespace std;
 bool isAnagram(string s , string t){
     int freq[256] = {0};
     for(char c : s){
-        if(c != ' '){
+        if(isalpha(c)){
             freq[tolower(c)]++;
         }
     }
     for(char c : t){
-        if(c != ' '){
+        if(isalpha(c)){
             freq[tolower(c)]--;
         }
     }
