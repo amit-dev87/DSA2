@@ -66,33 +66,21 @@ Both sentences contain `hello` twice and `world` once. Punctuation separates the
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T13:59:55.974Z  
+**Submitted:** 2026-11-16T14:01:55.534Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	string a;
-	getline(cin , a);
-	string b;
-	getline(cin , b);
-	if(isAnagram){
-	    cout<<
-	}
-	
-
-}
 bool isAnagram(string s , string t){
     int freq[256] = {0};
     for(char c : s){
         if(c != ' '){
-            freq[to_lower(c)]++;
+            freq[tolower(c)]++;
         }
     }
     for(char c : t){
         if(c != ' '){
-            freq[to_lower(c)]--;
+            freq[tolower(c)]--;
         }
     }
     for(int i = 0 ; i < 256 ; i++){
@@ -102,6 +90,20 @@ bool isAnagram(string s , string t){
     }
     return true;
 }
+int main() {
+	string a;
+	getline(cin , a);
+	string b;
+	getline(cin , b);
+	if(isAnagram){
+	    cout<< "The sentences are anagrams.";
+	}else{
+	    cout<< "The sentences are not anagrams.";
+	}
+	
+
+}
+
 
 ```
 
