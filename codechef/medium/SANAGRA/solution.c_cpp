@@ -1,27 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int main() {
-	string a;
-	getline(cin , a);
-	string b;
-	getline(cin , b);
-	if(isAnagram){
-	    cout<<
-	}
-	
-
-}
 bool isAnagram(string s , string t){
     int freq[256] = {0};
     for(char c : s){
         if(c != ' '){
-            freq[to_lower(c)]++;
+            freq[tolower(c)]++;
         }
     }
     for(char c : t){
         if(c != ' '){
-            freq[to_lower(c)]--;
+            freq[tolower(c)]--;
         }
     }
     for(int i = 0 ; i < 256 ; i++){
@@ -31,3 +19,17 @@ bool isAnagram(string s , string t){
     }
     return true;
 }
+int main() {
+	string a;
+	getline(cin , a);
+	string b;
+	getline(cin , b);
+	if(isAnagram){
+	    cout<< "The sentences are anagrams.";
+	}else{
+	    cout<< "The sentences are not anagrams.";
+	}
+	
+
+}
+
