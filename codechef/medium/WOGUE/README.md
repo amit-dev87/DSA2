@@ -58,7 +58,7 @@ BGGGG
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-16T13:43:17.087Z  
+**Submitted:** 2026-11-16T13:44:59.853Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -70,7 +70,7 @@ int main() {
 	while(t--){
 	    string s;
 	    string r;
-	    string m;
+	    string m(5 , ' ');
 	    cin>>s>>r;
 	    for(int i = 0 ; i < 5 ; i++){
 	        if(s[i] == r[i]){
