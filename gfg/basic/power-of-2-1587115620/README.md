@@ -32,7 +32,7 @@ Explanation: 1 is equal to 2 raised to 0 (20 = 1).
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T13:31:03.659Z  
+**Submitted:** 2026-11-17T14:32:53.492Z  
 
 ```cpp
 class Solution {
