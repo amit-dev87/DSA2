@@ -10,6 +10,8 @@ The overall run time complexity should be `O(log (m+n))`.
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
@@ -42,9 +44,9 @@ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 4 ms (beats 18.33%)  
-**Memory:** 95.6 MB (beats 31.37%)  
-**Submitted:** 2026-10-14T11:20:58.811Z  
+**Runtime:** 3 ms (beats 32.54%)  
+**Memory:** 95.5 MB (beats 32.75%)  
+**Submitted:** 2026-11-18T04:28:37.375Z  
 
 ```cpp
 class Solution {
