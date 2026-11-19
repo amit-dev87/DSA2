@@ -67,9 +67,9 @@ X--: X is decremented by 1, X = 1 - 1 = 0.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 21.68%)  
-**Memory:** 17.5 MB (beats 58.60%)  
-**Submitted:** 2026-11-19T09:08:10.423Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 17.5 MB (beats 85.32%)  
+**Submitted:** 2026-11-19T09:08:51.251Z  
 
 ```cpp
 class Solution {
@@ -78,9 +78,13 @@ public:
         int x = 0;
         for(string s : operations){
             if(s == "++X" || s == "X++"){
+
                 x++;
+
             }else{
+
                 x--;
+                
             }
         }
         return x;
