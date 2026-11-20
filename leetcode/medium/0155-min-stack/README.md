@@ -51,38 +51,63 @@ minStack.getMin(); // return -2
 ## Solution
 
 **Language:** C++  
-**Runtime:** 44 ms (beats 91.03%)  
-**Memory:** 151 MB (beats 93.16%)  
-**Submitted:** 2026-09-28T04:29:06.256Z  
+**Runtime:** 209 ms (beats 27.87%)  
+**Memory:** 157.9 MB (beats 5.29%)  
+**Submitted:** 2026-11-20T08:44:37.119Z  
 
 ```cpp
-class MinStack {
+class Node{
 public:
-    stack<pair<int,int>>s ;
-    MinStack() {
-        
+    int val;
+    Node* next;
+    int minimum;
+    Node(int x , int mini){
+        val = x;
+        next = nullptr;
+        minimum = mini;
     }
-    
+};
+class MinStack {
+private:
+    int size;
+    Node* head;
+    int minimum;
+public:
+    MinStack() {
+        head = nullptr;
+    }
     void push(int value) {
-        if(s.empty()){
-            s.push({value,value});
-        }else{
-            int minvalue=min(value,s.top().second);
-            s.push({value,minvalue});
-
+        int mini = value;
+        if (head != nullptr) {
+            mini = min(head->minimum, value);
         }
+        Node * newNode = new Node(value , mini);
+        newNode -> next = head;
+        head = newNode;
+       // mini = min(mini , value);
     }
     
     void pop() {
-     s.pop();
+        if (head == nullptr) return;
+        Node * temp = head;
+        head = head -> next;
+        temp -> next = nullptr;
+        delete temp;
+        //mini = INT_MAX;
+        // Node * temp1 = head;
+        // while(temp1  != nullptr){
+        //     mini = min(mini , temp1 -> val);
+        //     temp1 = temp1 -> next;
+        // }
     }
     
     int top() {
-        return s.top().first;
-    }
-    
+        if(head == nullptr) return -1;
+        return head -> val;
+    }    
     int getMin() {
-       return s.top().second;
+        if(head == nullptr) return -1;
+        return head -> minimum;
     }
 };
 
