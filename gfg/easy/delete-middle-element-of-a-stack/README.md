@@ -1,10 +1,10 @@
-# Delete Mid of a Stack
+# Delete Mid of Stack
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
 ## Problem
 
-Given a stack  **s**, delete the  **middle element** of the stack without using any additional data structure. The middle element is defined as the floor(size of stack + 1) / 2)-th element from the bottom of the stack (using 1-based indexing).
+Given a stack  **s**, delete the middle element of the stack without using any additional data structure. The middle element is defined as the floor(size of stack + 1) / 2)-th element from the bottom of the stack (using 1-based indexing).
 
  **Note**  **:**  The output shown by the compiler is the stack from top to bottom.
 
@@ -28,22 +28,22 @@ Explanation: The bottom-most element will be 10 and the top-most element will be
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-13T01:56:40.045Z  
+**Submitted:** 2026-11-21T08:48:00.847Z  
 
 ```cpp
 class Solution {
   public:
     void deleteMid(stack<int>& st) {
-        vector<int>a;
-        while(!st.empty()){
-            a.push_back(st.top());
+        stack<int>ans;
+        int n = st.size();
+        for(int i = 0 ; i < n/2 ; i++){
+            ans.push(st.top());
             st.pop();
         }
-        int n = a.size();
-        a.erase(a.begin()+n/2);
-        reverse(a.begin(),a.end());
-        for(int i : a){
-            st.push(i);
+        st.pop();
+        while(!ans.empty()){
+            st.push(ans.top());
+            ans.pop();
         }
     }
 };
