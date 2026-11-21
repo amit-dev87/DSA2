@@ -44,7 +44,7 @@ Output: 0
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8 MB  
-**Submitted:** 2026-11-21T15:59:10.837Z  
+**Submitted:** 2026-11-21T16:00:05.309Z  
 
 ```cpp
 class Solution {
@@ -54,11 +54,11 @@ public:
 
         int count = 0;
 
-        for(int i = 0 ; i < n ; i++){
+        for(long long i = 0 ; i < n ; i++){
 
             long long pro = 1;
 
-            for(int j = i ; j < n ; j++){
+            for(long long j = i ; j < n ; j++){
 
                 pro *= nums[j];
 
@@ -68,7 +68,9 @@ public:
                 }
             }
         }
+
     return count;
+
     }
 };
 ```
