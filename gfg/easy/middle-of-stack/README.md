@@ -27,19 +27,17 @@ Explanation: The two middle elements are 2 and 3. Since we need the middle eleme
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-21T08:27:03.914Z  
+**Submitted:** 2026-11-21T08:50:33.427Z  
 
 ```cpp
 class Solution {
   public:
-    int stackMiddle(stack<int>& st) {
-        vector<int>ans;
-        while(!st.empty()){
-            ans.push_back(st.top());
+    int stackMiddle(stack<int>& st){
+        int n = st.size();
+        for(int  i = 0 ; i < n/2 ; i++){
             st.pop();
         }
-        return ans[ans.size()/2];
-        
+        return st.top();
     }
 };
 ```
