@@ -39,21 +39,28 @@ Output: 2
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2249 ms (beats 15.50%)  
-**Memory:** 34.3 MB (beats 86.65%)  
-**Submitted:** 2026-11-21T15:45:38.996Z  
+**Runtime:** 2268 ms (beats 15.25%)  
+**Memory:** 34.2 MB (beats 93.99%)  
+**Submitted:** 2026-11-21T15:47:41.003Z  
 
 ```cpp
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        int n = nums.size() , count = 0;
+        int n = nums.size();
+
+        int count = 0;
+
         for(int i = 0 ; i < n ; i++){
+
             int sum = 0;
+
             for(int j = i ; j < n ; j++){
+
                 sum += nums[j];
 
                 if(sum == k){
+                    
                     count++;
                 }
             }
