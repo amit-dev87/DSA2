@@ -1,18 +1,16 @@
 class Solution {
   public:
     int findEquilibrium(vector<int> &arr) {
-        int sum=0,left=0;
-        for(int i:arr){
-            sum+=i;
+        int totalSum = 0;
+        for(int i : arr){
+            totalSum += i;
         }
-        for(int i=0;i<arr.size();i++){
-            
-               sum-=arr[i];
-               if(sum==left){
-                   return i;
-               }
-               left+=arr[i];
+        int leftSum = 0;
+        for(int i = 0 ; i < arr.size() ; i++){
+            int rightSum = totalSum - leftSum - arr[i];
+            if(rightSum == leftSum) return i;
+            leftSum += arr[i];
         }
-       return -1; 
+        return -1;
     }
 };
