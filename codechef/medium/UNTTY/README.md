@@ -79,7 +79,7 @@ The first `#` does nothing because the text is empty. Typing `a` gives `a`, and 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-23T13:40:50.872Z  
+**Submitted:** 2026-11-23T13:42:57.303Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -88,12 +88,15 @@ using namespace std;
 int main() {
 	string s;
 	cin>>s;
+	string ans;
 	for(int i = 0 ; i < s.size() ; i++){
-	    if(s[i] == '#' && i > 0){
-	        s.remove(s.begin() + (i - 1));
+	    if(s[i] != '#'){
+	        ans.push_back(s[i]);
+	    }else if(!ans.empty()){
+	        ans.pop_back();
 	    }
 	}
-	cout<<s;
+	cout<<ans;
 
 }
 
