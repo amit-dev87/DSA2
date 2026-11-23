@@ -34,25 +34,23 @@ Explanation: The sum of left of index 3 is -7 + 1 + 5 = -1 and sum on right of i
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-02T02:59:32.030Z  
+**Submitted:** 2026-11-23T13:01:43.918Z  
 
 ```cpp
 class Solution {
   public:
     int findEquilibrium(vector<int> &arr) {
-        int sum=0,left=0;
-        for(int i:arr){
-            sum+=i;
+        int totalSum = 0;
+        for(int i : arr){
+            totalSum += i;
         }
-        for(int i=0;i<arr.size();i++){
-            
-               sum-=arr[i];
-               if(sum==left){
-                   return i;
-               }
-               left+=arr[i];
+        int leftSum = 0;
+        for(int i = 0 ; i < arr.size() ; i++){
+            int rightSum = totalSum - leftSum - arr[i];
+            if(rightSum == leftSum) return i;
+            leftSum += arr[i];
         }
-       return -1; 
+        return -1;
     }
 };
 ```
