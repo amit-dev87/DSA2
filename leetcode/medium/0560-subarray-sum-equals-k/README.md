@@ -39,31 +39,25 @@ Output: 2
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2268 ms (beats 15.25%)  
-**Memory:** 34.2 MB (beats 93.99%)  
-**Submitted:** 2026-11-21T15:47:41.003Z  
+**Runtime:** 42 ms (beats 67.40%)  
+**Memory:** 45.3 MB (beats 74.82%)  
+**Submitted:** 2026-11-23T13:09:35.898Z  
 
 ```cpp
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int ,int>mp;
         int n = nums.size();
-
         int count = 0;
-
+        int sum = 0;
+        mp[0] = 1;
         for(int i = 0 ; i < n ; i++){
-
-            int sum = 0;
-
-            for(int j = i ; j < n ; j++){
-
-                sum += nums[j];
-
-                if(sum == k){
-                    
-                    count++;
-                }
+            sum += nums[i];
+            if(mp.find(sum - k) != mp.end()){
+                count += mp[sum - k];
             }
+            mp[sum]++;
         }
         return count;
     }
