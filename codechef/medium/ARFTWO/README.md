@@ -54,7 +54,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-23T13:36:07.697Z  
+**Submitted:** 2026-11-23T13:36:38.545Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,7 +66,7 @@ int main() {
 	while(t--){
 	    int a ,b, c, x;
 	    cin>>a>>b>>c>>x;
-	    if(a + b == x || a + c == x || b + c == x){
+	    if(a + b >= x || a + c >= x || b + c >= x){
 	        cout<<"YES"<<endl;
 	    }else{
 	        cout<<"NO"<<endl;
