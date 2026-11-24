@@ -37,7 +37,7 @@ Explanation: There is no loop.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-16T03:32:44.698Z  
+**Submitted:** 2026-11-24T08:48:30.154Z  
 
 ```cpp
 /* Structure of Linked List Node
@@ -54,12 +54,12 @@ class Node {
 class Solution {
   public:
     int lengthOfLoop(Node *head) {
-        Node* slow = head;
         Node* fast = head;
-        
-        while(fast != NULL && fast -> next != NULL){
-            slow = slow -> next;
+        Node* slow = head;
+        while(fast != nullptr && fast -> next != nullptr){
+            slow = slow -> next ;
             fast = fast -> next -> next;
+            
             if(slow == fast){
                 int count = 1;
                 Node* temp = slow -> next;
@@ -71,6 +71,7 @@ class Solution {
             }
         }
         return 0;
+        
     }
 };
 ```
