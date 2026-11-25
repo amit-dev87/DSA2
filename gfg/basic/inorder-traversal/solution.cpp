@@ -13,21 +13,17 @@ class Node {
 
 class Solution {
   public:
+    void solve(Node* root , vector<int>&ans){
+        if(root == nullptr){
+            return;
+        }
+        solve(root -> left , ans);
+        ans.push_back(root -> data);
+        solve(root -> right , ans);
+    }
     vector<int> inOrder(Node* root) {
         vector<int>ans;
-        if(root == nullptr){
-            return ans;
-        }
-        vector<int>left = inOrder(root -> left);
-        
-        ans.insert(ans.end(),left.begin(),left.end());
-        
-        ans.push_back(root -> data);
-        
-        vector<int>right = inOrder(root -> right);
-        
-        ans.insert(ans.end(),right.begin(),right.end());
-        
+        solve(root , ans);
         return ans;
         
     }
