@@ -29,7 +29,7 @@ Explanation: The inorder traversal of the given binary tree is [1, 7, 10, 8, 6, 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T07:41:25.985Z  
+**Submitted:** 2026-11-25T16:00:21.110Z  
 
 ```cpp
 /* Structure of Binary Tree Node
@@ -47,21 +47,17 @@ class Node {
 
 class Solution {
   public:
+    void solve(Node* root , vector<int>&ans){
+        if(root == nullptr){
+            return;
+        }
+        solve(root -> left , ans);
+        ans.push_back(root -> data);
+        solve(root -> right , ans);
+    }
     vector<int> inOrder(Node* root) {
         vector<int>ans;
-        if(root == nullptr){
-            return ans;
-        }
-        vector<int>left = inOrder(root -> left);
-        
-        ans.insert(ans.end(),left.begin(),left.end());
-        
-        ans.push_back(root -> data);
-        
-        vector<int>right = inOrder(root -> right);
-        
-        ans.insert(ans.end(),right.begin(),right.end());
-        
+        solve(root , ans);
         return ans;
         
     }
