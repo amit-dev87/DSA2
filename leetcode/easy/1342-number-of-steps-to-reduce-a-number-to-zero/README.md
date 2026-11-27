@@ -57,9 +57,9 @@ Output: 12
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 4.42%)  
-**Memory:** 8 MB (beats 13.39%)  
-**Submitted:** 2026-11-27T07:51:43.607Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 8.1 MB (beats 13.39%)  
+**Submitted:** 2026-11-27T07:52:07.364Z  
 
 ```cpp
 class Solution {
@@ -70,7 +70,7 @@ public:
             if(num %2 != 0){
                 num -= 1;
             }else{
-                num/=2;
+                num /= 2;
             }
             count++;
         }
