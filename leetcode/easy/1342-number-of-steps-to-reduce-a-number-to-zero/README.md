@@ -58,8 +58,8 @@ Output: 12
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.1 MB (beats 13.39%)  
-**Submitted:** 2026-11-27T07:52:07.364Z  
+**Memory:** 7.9 MB (beats 50.54%)  
+**Submitted:** 2026-11-27T07:52:26.758Z  
 
 ```cpp
 class Solution {
@@ -69,10 +69,12 @@ public:
         while(num > 0){
             if(num %2 != 0){
                 num -= 1;
+                count++;
             }else{
                 num /= 2;
+                count++;
             }
-            count++;
+            
         }
     return count;
     }
