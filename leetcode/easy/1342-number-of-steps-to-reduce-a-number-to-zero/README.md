@@ -57,9 +57,9 @@ Output: 12
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 7.8 MB (beats 77.32%)  
-**Submitted:** 2026-11-27T07:48:08.377Z  
+**Runtime:** 1 ms (beats 4.42%)  
+**Memory:** 8 MB (beats 13.39%)  
+**Submitted:** 2026-11-27T07:51:43.607Z  
 
 ```cpp
 class Solution {
@@ -69,11 +69,10 @@ public:
         while(num > 0){
             if(num %2 != 0){
                 num -= 1;
-                count++;
             }else{
                 num/=2;
-                count++;
             }
+            count++;
         }
     return count;
     }
